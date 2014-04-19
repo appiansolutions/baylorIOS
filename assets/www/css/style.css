@@ -1,0 +1,40 @@
+
+/*   NAV BAR  */
+#navBar
+{
+ width:100%;   
+}
+#navBarPrev
+{
+    float:left;
+    margin-left:7%;
+    width:28%;
+   
+}
+#navBarHome
+{
+    float:left;
+    margin-left:4%;
+    width:28%;
+    
+   
+}
+#navBarNext
+{
+    float:left;
+    margin-left:5%;
+    width:28%;
+    
+}
+/*   END NAV BAR  */
+
+/*   HOME  */
+#homeLogo
+{
+    
+
+padding-top:10px;
+width:100%;
+margin:auto;
+}
+/*   END HOME  */

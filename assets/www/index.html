@@ -22,22 +22,96 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>John Baylor Test Prep</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <<script type='application/javascript' src='js/fastclick.js'></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+        <link rel="stylesheet" type="text/css" href="appframework/build/css/icons.css" />
+        <link rel="stylesheet" type="text/css" href="appframework/build/css/af.ui.css"  />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+       <!-- <script src="intelxdk.js"></script>
+		<script src="cordova.js"></script> -->
+		<script type="text/javascript" charset="utf-8" src="appframework/build/ui/appframework.ui.min.js"></script>
+		<script type='application/javascript' src='js/fastclick.js'></script>
+		
+		<script type="text/javascript">
+			$.ui.useOSThemes=false; //This must be set before $(document).ready() triggers;
+		</script>
+
+		<!-- emulate touch events on desktop browsers only -->
+            <script>
+                if (!((window.DocumentTouch && document instanceof DocumentTouch) || 'ontouchstart' in window)) {
+                var script = document.createElement("script");
+                script.src = "plugins/af.desktopBrowsers.js";
+                var tag = $("head").append(script);
+            }
+            </script>
+	<!--
         <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+ 
+            $.ui.autoLaunch = false; //By default, it is set to true and you're app will run right away.  We set it to false to show a splashscreen
+            /* This function runs when the body is loaded.*/
+            var init = function () {
+            
+            window.setTimeout(function () {
+	            $.ui.launch();
+	       		 }, 1500);//We wait 1.5 seconds to call $.ui.launch after DOMContentLoaded fires
+	   			 };
+    		document.addEventListener("DOMContentLoaded", init, false);
+
+    		/* Intel native bridge is available */
+			var onDeviceReady=function(){
+			//hide splash screen
+			intel.xdk.device.hideSplashScreen();
+			};
+			document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
+ 			
+ 			window.addEventListener('load', function() {
+ 				FastClick.attach(document.body);//attach fastclick
+   			}, false);
+		</script> -->
+
+		
+        
+        
+        
+
+</head>
+<body id="afui" class="ios7">
+        
+    
+        <!-- this is the header div at the top -->
+        <div id="header">
+        
+        </div>
+        
+        <div id="content">
+        <!-- here is where you can add your panels -->
+            
+        
+        <div data-title='Home' id="main" class="panel" selected="true">
+        	<img id="homeLogo" src="/img/JBTPlogo.png" />
+
+        </div>
+        
+        </div>
+        
+        <!-- bottom navbar. Add additional tabs here -->
+        <div id="navbar">
+        <div class="horzRule">
+        	<div id="navBarPrev"><a href="#prev" class="button previous">Back</a></div>
+       		<div id="navBarHome"><a href="#home" class="button home">Home</a></div>
+        	<div id="navBarNext"><a href="#next" class="button next">Next</a></div>
+
+        </div>
+        
+        </div>
+        
+        
+    
+</body>
+        
 </html>
