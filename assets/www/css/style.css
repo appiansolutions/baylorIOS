@@ -1,40 +1,16 @@
+#navBar { width: 100%; }
+#navBarPrev { float:left; width:33.33%; }
+#navBarHome { float:left; width:33.33%; }
+#navBarNext { float:left; width:33.33%; }
 
-/*   NAV BAR  */
-#navBar
-{
- width:100%;   
-}
-#navBarPrev
-{
-    float:left;
-    margin-left:7%;
-    width:28%;
-   
-}
-#navBarHome
-{
-    float:left;
-    margin-left:4%;
-    width:28%;
-    
-   
-}
-#navBarNext
-{
-    float:left;
-    margin-left:5%;
-    width:28%;
-    
-}
-/*   END NAV BAR  */
+#prev { display: block; width: 100%; height: 100%; margin: 0; padding: 0}
 
-/*   HOME  */
-#homeLogo
-{
-    
+#navBarMain { width:155px; margin:0 auto; }
 
-padding-top:10px;
-width:100%;
-margin:auto;
-}
-/*   END HOME  */
+#homeLogo { padding-top:10px; width:100%; margin:auto; }
+
+.lessonsButton { width:130px; margin:0 25px; }
+.lessonsButton a { text-decoration: none; color: rgba(82,155,234,255); }
+
+.coursesButton { width:46px; margin:0 auto;	}
+#act_lessons_button { }

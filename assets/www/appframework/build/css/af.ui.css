@@ -145,7 +145,7 @@ body {
     display:block;
     z-index:250;
     -webkit-box-sizing:border-box; box-sizing:border-box;
-    height:44px;
+    height:52px;
     left:0; right:0;
     
 } /* This is masthead bar that appears at the top of the UI */
@@ -154,12 +154,12 @@ body {
 
 
 #afui .header h1 {
-    
+    line-height: 30px;
     position:absolute;
     width:45%;
     z-index:1;
     text-align:center;
-    height:44px;
+    height:52px;
     font-size:18px;
     font-weight:bold;
     left:27.5%;
@@ -237,12 +237,11 @@ body {
 
 #afui .footer {  
     z-index:180;
-    height:49px;
+    height:52px;
     display:block;
     left:0;
     right:0;
     position:relative;
-    padding:0 3px;
 }
 
 
@@ -676,7 +675,7 @@ body {
 }
 
 #afui .header{
-    background:#0088D1;
+    background: white;
     border:none;
     border-bottom:1px solid #0088D1;
     color:white;
@@ -885,7 +884,7 @@ body {
     font-size:22px;
     position: absolute;
     top: 2px;
-    left: -25px;
+    left: -28px;
     text-align: center;
     border-radius:0;
     border: none;
@@ -913,7 +912,7 @@ body {
     font-size:22px;
     position: absolute;
     top: 6px;
-    right: -25px;
+    right: -28px;
     text-align: center;
     border-radius:0;
     border: none;
@@ -976,9 +975,7 @@ body {
   padding: 20px 20px 20px 10px;
   border-bottom: 1px solid #ccc;
 }
-#afui .list li:first-child {
-  border-top: 1px solid #ccc;
-}
+
 #afui .list > li > a {
   display: block;
   position: relative;
@@ -1270,10 +1267,10 @@ body {
   font-size:inherit;
 } 
 #afui .button {
+    text-transform: uppercase;
 	position:relative;
 	display:inline-block;
-	padding:8px 12px;
-	margin:8px 0;
+	padding:0 12px;
 	font-weight:bold;
 	color:#000;
 	text-align:center;
@@ -1291,27 +1288,46 @@ body {
 /* Active */
 #afui .button.pressed { background:#fff; }
 
-#afui .button.previous {
+#afui .button.begin { 
+    display: block;
+    width: 100%;
+}
 
-	margin-left:16px;
+#afui .button.previous {
+    display: inline-block;
+	margin: auto; 
+    margin-left: 40%;
+    line-height: 52px;
 	padding-left:6px;
 	border-color:#666 #666 transparent transparent !important;
 }
+#afui .button.home {
+    display: inline-block;
+    margin: auto;
+    line-height: 52px;
+    width: 100%;
+    border-top: none;
+    border-bottom:none;
+}
 #afui .button.next {
+    display: inline-block;
+    margin: auto;
+    margin-left: 15%;
+    line-height: 52px;
+    
 	border-color:#666 transparent #666 #666 !important;
-	margin-right:16px;
 	padding-right:6px;
 }
 
 
 #afui .button.previous::after {
-
+    display: inline-block;
     z-index:-1;
 	content:'';
 	position:absolute;
 	width:25px; height:25px;
 	background-color:inherit;
-  	top:3px; left:-11px;
+  	top:15px; 
     border-radius:5px;
     border:1px solid;
 	border-color:transparent transparent inherit transparent;
@@ -1323,7 +1339,7 @@ body {
 	position:absolute;
 	width:25px; height:25px;
 	background-color:inherit;
-  	top:3px; right:-11px;
+  	top:11px; 
     border-radius:5px;
     border:1px solid;
     border-color:transparent transparent transparent transparent;
@@ -2552,11 +2568,12 @@ body {
 /* border rgba(158,158,158,255) */
 
 #afui.ios7 {
-     font-family:'HelveticaNeue', 'Helvetica Neue',Helvetica, Arial, sans-serif;
+     font-family:'Open Sans', 'HelveticaNeue', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 
 #afui.ios7 .header {
-    background:rgb(249,249,249);
+    /*background:rgb(249,249,249);*/
+    margin-top: -1px;
     color:inherit;
     border:none;
     border-bottom:1px solid rgba(158,158,158,255);
@@ -2654,21 +2671,20 @@ body {
     color:rgba(82,155,234,255);
     display: block;
     position: absolute;
-    line-height:44px;
-    left: 25px;
+    line-height:53px;
+    left: 33px;
     text-overflow: ellipsis;
     font-size: 14px;
-    padding: 0;
     text-shadow: none;
     background-color: transparent;
     border:none;
     border-color: transparent;
-    height: 44px;
+    height: 52px;
     top:0;
     border-radius: 0;
     box-shadow:none;
     margin: 0;
-    padding-left: 0;
+    padding-left: 5px;;
     text-align: center;
     width:50px;
     padding:0 !important;
@@ -2679,8 +2695,8 @@ body {
     z-index: -1;
     font-size:22px;
     position: absolute;
-    top: 10px;
-    left: -20px;
+    top: 14.5px;
+    left: -18px;
     text-align: center;
     border-radius: 0;
     border: none;
@@ -2842,8 +2858,7 @@ body {
     z-index: -1;
     font-size:22px;
     position: absolute;
-    top: 2px;
-    left: -25px;
+    top: 11px;
     text-align: center;
     border-radius: 0;
     border: none;
@@ -2870,8 +2885,7 @@ body {
     z-index: -1;
     font-size:22px;
     position: absolute;
-    top: 6px;
-    right: -25px;
+    top: 14.5px;
     text-align: center;
     border-radius: 0;
     border: none;

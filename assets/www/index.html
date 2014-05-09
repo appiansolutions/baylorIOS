@@ -31,6 +31,8 @@
         <link rel="stylesheet" type="text/css" href="appframework/build/css/icons.css" />
         <link rel="stylesheet" type="text/css" href="appframework/build/css/af.ui.css"  />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+        
+        <link rel="stylesheet" type="text/css" href="master.css" />
 
        <!-- <script src="intelxdk.js"></script>
 		<script src="cordova.js"></script> -->
@@ -49,7 +51,7 @@
                 var tag = $("head").append(script);
             }
             </script>
-	<!--
+	
         <script type="text/javascript">
  
             $.ui.autoLaunch = false; //By default, it is set to true and you're app will run right away.  We set it to false to show a splashscreen
@@ -72,7 +74,7 @@
  			window.addEventListener('load', function() {
  				FastClick.attach(document.body);//attach fastclick
    			}, false);
-		</script> -->
+		</script> 
 
 		
         
@@ -89,27 +91,50 @@
         </div>
         
         <div id="content">
-        <!-- here is where you can add your panels -->
-            
-        
-        <div data-title='Home' id="main" class="panel" selected="true">
-        	<img id="homeLogo" src="/img/JBTPlogo.png" />
-
-        </div>
+	        <!-- here is where you can add your panels -->
+	            
+	        
+	        <div data-title='Home' id="main" class="panel" selected="true" data-defer="pages/main.html" data-footer="main_nav">
+	     
+	        </div>
+	        
+	    
+	        
+	        <div data-title='Lessons' id="lessons" class="panel" data-defer="pages/lessons.html" data-tab="navbar">
+	        <!-- Lesson Plan Main Page, contains three options, ACT PREP SAT PSAT College -->
+	        </div>
+	        
+	        
+	        
+	        <div data-title='Courses' id="courses" class="panel" data-defer="pages/courses.html" data-tab="navbar">
+	        <!-- Courses div, will be used for act courses and SAT/PSAT-->
+	
+	        </div>
+	        
+	
+	        
+	        
+	        
+	        
         
         </div>
         
         <!-- bottom navbar. Add additional tabs here -->
-        <div id="navbar">
-        <div class="horzRule">
-        	<div id="navBarPrev"><a href="#prev" class="button previous">Back</a></div>
-       		<div id="navBarHome"><a href="#home" class="button home">Home</a></div>
-        	<div id="navBarNext"><a href="#next" class="button next">Next</a></div>
+        <footer id="navbar">
+        <!-- NEXT/HOME/PREV -->
+	        <div class="horzRule">
+	        	<div id="navBarPrev"><a href="#prev" class="button previous">Back</a></div>
+	       		<div id="navBarHome"><a href="#home" class="button home">Home</a></div>
+	        	<div id="navBarNext"><a href="#next" class="button next">Next</a></div>
+			</div>
+		
+        </footer>
+        <footer id="main_nav">
+        <!-- GO TO LESSON -->
+        	<div id="navBarMain"><a id="mainNavText" href="#lessons" class="button begin">Begin the Lessons</a></div>
+        </footer>
+        
 
-        </div>
-        
-        </div>
-        
         
     
 </body>
